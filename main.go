@@ -23,13 +23,13 @@ import (
 )
 
 var (
-	projectId           = "sd-test-246101"
-	bucketName          = "sd-test-246101-bucket"
+	projectId           = "your-project"
+	bucketName          = "your-bucket"
 	kmsKeyRing          = "mycacerts"
 	kmsKey              = "key1"
 	kmsKeyVersion       = "1"
 	kmsLocationId       = "us-central1"
-	serviceAccountEmail = "kms-svc-account@sd-test-246101.iam.gserviceaccount.com"
+	serviceAccountEmail = "kms-svc-account@your-project.iam.gserviceaccount.com"
 	keyId               = "ce4ceffd5f9c8b399df9bf7b5c13327dab65f180"
 	//keyId = "db8f0a5af9cf3bd211f4936ab7350788d4c774d8"
 )
@@ -83,14 +83,14 @@ func main() {
 
 	ts, err := salkmsauth.KmsTokenSource(
 		&salkmsauth.KmsTokenConfig{
-			Email:         serviceAccountEmail,
-			ProjectId:     projectId,
-			LocationId:    kmsLocationId,
-			KeyRing:       kmsKeyRing,
-			Key:           kmsKey,
-			KeyVersion:    kmsKeyVersion,
-			Audience:      "https://pubsub.googleapis.com/google.pubsub.v1.Publisher",
-			KeyID:         keyId,
+			Email:      serviceAccountEmail,
+			ProjectId:  projectId,
+			LocationId: kmsLocationId,
+			KeyRing:    kmsKeyRing,
+			Key:        kmsKey,
+			KeyVersion: kmsKeyVersion,
+			//Audience:      "https://pubsub.googleapis.com/google.pubsub.v1.Publisher",
+			//KeyID:         keyId,
 			UseOauthToken: true,
 		},
 	)

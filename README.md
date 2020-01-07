@@ -246,7 +246,8 @@ ServiceAccount import requires a the public `x509` certificate but KMS does not 
 
 However, since we've setup a `crypto.Singer` for cloud KMS, we can use it to genreate an x509 certificate pretty easily.  
 
-Download `certgen.go`:
+Download `certgen.go` from the `crypto.Singer` implementation:
+-  [golang crypto.Signer, crypto.Decrypter for Google Cloud KMS, TPM and PEM file](https://github.com/salrashid123/signer):
 
 ```bash
  wget https://raw.githubusercontent.com/salrashid123/signer/master/certgen/certgen.go
