@@ -1,10 +1,6 @@
 # Google Cloud KMS based Service Account SignedURLs
 
-Generate a [GCS SignedURL](https://cloud.google.com/storage/docs/access-control/signed-urls) using a service account key embedded inside GCP KMS.  Y
-
-es, i know, you can just use the service account key itsef but this has the advantage that the key is actually inside KMS
-
-Ofcourse not matter what you do, you must have IAM access to the KMS key itself before you do anything.  In the case where you're authenticating against a GCP API, you could just have direct access to the target resource but if policies madate you need to use KMS based keys for some reason, you can use this procedure (note, if you just want to impersonate a service account itself to sign or authenticate, consider [Impersonated TokenSOurce](https://github.com/salrashid123/oauth2#usage-impersonatedcredentials))
+Generate a [GCS SignedURL](https://cloud.google.com/storage/docs/access-control/signed-urls) using a service account key embedded inside GCP KMS.  Yes, i know, you can just use the service account key itsef but this has the advantage that the key is actually inside KMS
 
 >> Note: this code is *NOT* supported by Google.  _caveat empotor_
 
@@ -30,6 +26,7 @@ In the first technique, the private key for a service account is exposed outside
 Anyway, perform the following steps in the same shell (since we use several env-vars together)
 
 1) first setup some environment variables
+2) 
 ```bash
 export PROJECT_ID=`gcloud config get-value core/project`
 export PROJECT_NUMBER=`gcloud projects describe $PROJECT_ID --format="value(projectNumber)"`
