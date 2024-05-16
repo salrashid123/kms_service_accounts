@@ -8,7 +8,7 @@ require (
 	cloud.google.com/go/pubsub v1.38.0
 	cloud.google.com/go/storage v1.41.0
 	github.com/salrashid123/oauth2/google v0.0.0-20201023235943-0c6294e290c3
-	github.com/salrashid123/signer/kms v0.0.0-20240513125125-4b78a1d16745
+	github.com/salrashid123/signer/kms v0.0.0-20240516111737-897bb872f7f0
 	golang.org/x/oauth2 v0.20.0
 	google.golang.org/api v0.180.0
 )
