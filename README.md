@@ -15,11 +15,10 @@ For reference, see:
 
 
 - KMS based Signer:
-  - [https://github.com/salrashid123/signer](https://github.com/salrashid123/signer)
-  - [KMS golang Signer](https://github.com/salrashid123/kms_golang_signer)
+  - [crypto.Signer, implementations for Google Cloud KMS and Trusted Platform Modules](https://github.com/salrashid123/signer)
 
 - KMS based mTLS
-  - [mTLS with KMS](https://medium.com/google-cloud/mtls-with-google-cloud-kms-fb17f3ed8219)
+  - [mTLS with Google Cloud KMS](https://github.com/salrashid123/kms_golang_signer)
 
 
 ### Setup
